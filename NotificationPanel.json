@@ -1,0 +1,101 @@
+{
+	"id": "NotificationPanel",
+	"version": "1.0.0",
+	"name": "Notification Panel",
+	"description": "A notification popup panel that can communicate updates to users ",
+	"newInstancePrefix": "DrillpathDynamic_",
+	"icon": "",
+	"vendor": "Danny Brassil",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "notification-main",
+			"url": "/NotificationPanel_main.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		 }
+	],
+	"properties": {
+		"width": {
+			"type": "integer",
+			"default": 768
+		},
+		"height": {
+			"type": "integer",
+			"default": 32
+		},
+		"userID":{
+			"type": "string",
+			"description": "the ID of the user using the SAC dashboard"
+		},
+		"dashboardName": {
+			"type": "string",
+			"description": "the name of the dashboard being used"
+		},
+		"dontShowAgain": {
+			"type": "boolean",
+			"description": "a boolean represnting the option if the user clicked do not show again on the popup",
+			"default": false
+		}
+
+	},
+	"methods": {
+		"setUserID": {
+			"description": "Sets the user ID of the SAC user.",
+			"parameters": [
+				{
+					"name": "newUserID",
+					"type": "string",
+					"description": "The user ID of the SAC user"
+				}
+			],
+			"body": "this.userID = newUserID;"
+		},
+		"getUserID": {
+			"returnType": "string",
+			"description": "Returns the selected item ID in the drillpath.",
+			"body": "return this.userID;"
+		},
+		"setDashboardName": {
+			"description": "Sets the name of the dashboard being used.",
+			"parameters": [
+				{
+					"name": "newDashboardName",
+					"type": "string",
+					"description": "The name of the dashboard being used"
+				}
+			],
+			"body": "this.dashboardName = newDashboardName;"
+
+		},
+		"getDashboardName": {
+			"returnType": "string",
+			"description": "Returns the name of the dashboard being used",
+			"body": "return this.dashboardName;"
+		},
+		"setDontShowAgain": {
+			"description": "Sets the true or false value if the user has clicked dont show again on the popup .",
+			"parameters": [
+				{
+					"name": "newDontShowAgain",
+					"type": "boolean",
+					"description": "The true/false value if the user has selected dont show again "
+				}
+			],
+			"body": "this.dontShowAgain = newDontShowAgain;"
+		},
+		"getDontShowAgain": {
+			"returnType": "boolean",
+			"description": "Returns the true / false if the user has selected dont show again.",
+			"body": "return this.dontShowAgain;"
+		}
+	
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks."
+		}
+	}
+}

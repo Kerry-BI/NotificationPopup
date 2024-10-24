@@ -1,0 +1,19 @@
+{
+    "Supply_Chain_Capacity": {
+      "dbrassil1": {
+        "dontShowAgain": true
+      },
+      "user456": {
+        "dontShowAgain": false
+      }
+    },
+    "IO_Customer_OTIF": {
+      "user123": {
+        "dontShowAgain": false
+      },
+      "user789": {
+        "dontShowAgain": true
+      }
+    }
+  }
+  
